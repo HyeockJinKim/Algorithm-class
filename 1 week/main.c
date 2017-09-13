@@ -78,14 +78,14 @@ void sortGrade(char * fileName) {
             temp->next->prev = temp;
             first = temp;
         }
-        else if (first->prev->point <= number){
+        /*else if (first->prev->point <= number){
             temp->prev = first->prev;
             temp->next = first;
             temp->prev->next = temp;
             temp->next->prev = temp;
-        }
+        }*/
         else {
-            while (temp2->next->point <= number) {
+            while (temp2->next->point <= number && temp2->next != first) {
                 temp2 = temp2->next;
             }
             temp->prev =temp2;
@@ -152,14 +152,14 @@ void sortPoint(char * fileName) {
             temp->next->prev = temp;
             first = temp;
         }
-        else if (first->prev->point <= number){
+/*        else if (first->prev->point <= number){
             temp->prev = first->prev;
             temp->next = first;
             temp->prev->next = temp;
             temp->next->prev = temp;
-        }
+        }*/
         else {
-            while (temp2->next->point <= number) {
+            while (temp2->next->point <= number && temp2->next != first) {
                 temp2 = temp2->next;
             }
             temp->prev =temp2;
