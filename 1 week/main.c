@@ -20,7 +20,6 @@ void test_100();
 void test_1000();
 void test_10000();
 
-
 int main(){
 
 // This is for  test1, test2, test3
@@ -127,7 +126,7 @@ void sortPoint(char * fileName) {
     }
     printf("%s : \n\n", fileName);
 
-    int number;
+    int number, i = 1;
     pStudent first;
     first = (pStudent)malloc(sizeof(struct _student));
 
@@ -173,11 +172,11 @@ void sortPoint(char * fileName) {
     fclose(file);
 
     pStudent order = first;
-    printf("%d\n", order->point);
+    printf("point %5d : %d\n", i++, order->point);
     order = order->next;
     while (order != first) {
         // Check the results.
-        printf("%d\n", order->point);
+        printf("point %5d : %d\n", i++, order->point);
         order = order->next;
     }
 
