@@ -10,11 +10,11 @@ struct _student{
 };
 typedef struct _student* pStudent;
 
-void sortGrade(char * );
+void sortGrade(char * ); // No need to write, but just wondering
+void sortPoint(char * ); // No need to write, but just wondering
 void test1();
 void test2();
 void test3();
-
 void test_10();
 void test_100();
 void test_1000();
@@ -61,8 +61,6 @@ void sortGrade(char * fileName) {
     first->next = first;
     first->prev = first;
     strcpy(first->studentId, tempStudentId);
-
-    fscanf(file,"%s %d\n", tempStudentId, &number);
 
     while (fscanf(file,"%s %d\n", tempStudentId, &number) != -1) {
         pStudent temp;
@@ -192,6 +190,8 @@ void sortPoint(char * fileName) {
         free(temp);
     }
     free(first);
+    printf("\n\n");
+
 }
 
 void test1() {
